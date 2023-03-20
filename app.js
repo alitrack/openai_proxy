@@ -5,7 +5,7 @@ const port = process.env.PORT || 9000;
 
 
 app.use('/', createProxyMiddleware({
-  target: "https://www.bing.com",
+  target: "https://api.openai.com",
   changeOrigin: true,
   onProxyRes: function (proxyRes, req, res) {
     proxyRes.headers['Access-Control-Allow-Origin'] = '*';
